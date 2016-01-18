@@ -1,0 +1,3 @@
+﻿------ Build started: Project: aFlash, Configuration: Debug Any CPU ------
+	Skipping cloud build. To build in the cloud, please use the AppBuilder menu - APPBUILDER/Built in cloud.
+========== Build: 1 succeeded or up-to-date, 0 failed, 0 skipped ==========
