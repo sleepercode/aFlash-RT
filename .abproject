@@ -33,16 +33,16 @@
   ],
   "AndroidVersionCode": "1",
   "WP8SupportedResolutions": [
-    "ID_RESOLUTION_HD720P",
     "ID_RESOLUTION_WVGA",
-    "ID_RESOLUTION_WXGA"
+    "ID_RESOLUTION_WXGA",
+    "ID_RESOLUTION_HD720P"
   ],
   "Framework": "Cordova",
   "projectVersion": 1,
   "WP8PublisherID": "{d9f52ed6-9ccb-416f-babc-f8be0e9574f8}",
   "WP8ProductID": "{7fa183a1-bd21-4f01-b661-54a23f6d89e5}",
-  "WP8PackageIdentityName": "1234Telerik.com.telerik.aflasht",
-  "WP8WindowsPublisherName": "CN=Telerik",
+  "WP8PackageIdentityName": "1234Ameel.com.ameel.aflasht",
+  "WP8WindowsPublisherName": "CN=Ameel",
   "WPSdk": "8.1",
   "iOSDeploymentTarget": "8.4"
 }
