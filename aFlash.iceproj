@@ -40,23 +40,11 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="App_Resources\Android\drawable-hdpi\icon.png" />
-    <Resource Include="App_Resources\Android\drawable-hdpi\splashscreen.png" />
-    <Resource Include="App_Resources\Android\drawable-land-hdpi\splashscreen.png" />
-    <Resource Include="App_Resources\Android\drawable-land-ldpi\splashscreen.png" />
-    <Resource Include="App_Resources\Android\drawable-land-mdpi\splashscreen.png" />
-    <Resource Include="App_Resources\Android\drawable-land-xhdpi\splashscreen.png" />
-    <Resource Include="App_Resources\Android\drawable-land-xxhdpi\splashscreen.png" />
-    <Resource Include="App_Resources\Android\drawable-land-xxxhdpi\splashscreen.png" />
     <Resource Include="App_Resources\Android\drawable-ldpi\icon.png" />
-    <Resource Include="App_Resources\Android\drawable-ldpi\splashscreen.png" />
     <Resource Include="App_Resources\Android\drawable-mdpi\icon.png" />
-    <Resource Include="App_Resources\Android\drawable-mdpi\splashscreen.png" />
     <Resource Include="App_Resources\Android\drawable-xhdpi\icon.png" />
-    <Resource Include="App_Resources\Android\drawable-xhdpi\splashscreen.png" />
     <Resource Include="App_Resources\Android\drawable-xxhdpi\icon.png" />
-    <Resource Include="App_Resources\Android\drawable-xxhdpi\splashscreen.png" />
     <Resource Include="App_Resources\Android\drawable-xxxhdpi\icon.png" />
-    <Resource Include="App_Resources\Android\drawable-xxxhdpi\splashscreen.png" />
     <Resource Include="App_Resources\iOS\Default-568h@2x.png" />
     <Resource Include="App_Resources\iOS\Default-667h.png" />
     <Resource Include="App_Resources\iOS\Default-736h.png" />
