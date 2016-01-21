@@ -36,6 +36,8 @@
     <Content Include="Plugins\Flashlight-Plugin\www\Flashlight.js" />
     <Content Include="scripts\main.js" />
     <Content Include="styles\img\logo.png" />
+    <Content Include="styles\img\off130.png" />
+    <Content Include="styles\img\on130.png" />
     <Content Include="styles\main.css" />
   </ItemGroup>
   <ItemGroup>

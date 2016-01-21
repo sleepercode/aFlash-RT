@@ -202,8 +202,9 @@ body
 {
 	border: 3px solid #008ae6;
     border-radius: 3px;
-    color: #e6e6e6;
-    background: transparent;
+    color: #edae00;
+    background: url(img/off130.png) no-repeat  #999; /*border-box*/
+    background-position: center;
     margin-left:0px;
     margin-top:12px;
     width: 100%;
@@ -216,7 +217,9 @@ body
 {
 	border: 1px solid #639ecd;
 	background-image: none;
-	background-color: #639ecd;
+	/*background-color: #639ecd;*/
+    background: url(img/on130.png) no-repeat  #999; 
+    background-position: center;
     color: #fff;
     box-shadow: inset 0px 1px 1px 0px rgba(0,0,0,0.3);
     -webkit-box-shadow: inset 0px 1px 1px 0px rgba(0,0,0,0.3);
@@ -232,7 +235,7 @@ body
 	border: 1px solid rgba(255, 255, 255, 0.5);
 }
 .button.dh {
-    height:80%;   
+    height:130px;   
 }
 .button.dw {
     width:100%;   
