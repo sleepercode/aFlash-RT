@@ -34,7 +34,6 @@
     <Content Include="Plugins\Flashlight-Plugin\src\ios\Flashlight.m" />
     <Content Include="Plugins\Flashlight-Plugin\src\wp8\Flashlight.cs" />
     <Content Include="Plugins\Flashlight-Plugin\www\Flashlight.js" />
-    <Content Include="scripts\jquery.min.js" />
     <Content Include="scripts\main.js" />
     <Content Include="styles\img\logo.png" />
     <Content Include="styles\img\off130.png" />
