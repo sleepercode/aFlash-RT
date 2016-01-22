@@ -11,18 +11,33 @@ function onDeviceReady() {
 
 function toggleFlashLight() {
     if (window.navigator.simulator === true) {
-        alert("Not Supported in Simulator.");
+        //alert("Not Supported in Simulator.");
+        if (toggleFLButton.style.backgroundImage === "center url('styles/img/on130.png') no-repeat ") {
+            toggleFLButton.style.backgroundImage = "center url('styles/img/off130.png') no-repeat ";
+        }
+        else {
+            toggleFLButton.style.backgroundImage = "center url('styles/img/on130.png') no-repeat";
+        }
+        window.plugins.flashlight.toggle(onSuccess, onError);
     }
     else {
         window.plugins.flashlight.available(function(isAvailable) {
             if (isAvailable) {
                 // toggle on/off
-                if (toggleFLButton.textContent === "Turn ON aFlash") {
-                    toggleFLButton.textContent = "Turn OFF aFlash";
+                //if (toggleFLButton.textContent === "ON") {
+                //    toggleFLButton.textContent = "OFF";
+                //}
+                //else {
+                //    toggleFLButton.textContent = "ON";
+                //} 
+                //window.plugins.flashlight.toggle(onSuccess, onError);
+
+                if (toggleFLButton.style.backgroundImage === "center url('styles/img/on130.png') no-repeat ") {
+                    toggleFLButton.style.backgroundImage = "center url('styles/img/off130.png') no-repeat ";
                 }
                 else {
-                    toggleFLButton.textContent = "Turn ON aFlash";
-                } 
+                    toggleFLButton.style.backgroundImage = "center url('styles/img/on130.png') no-repeat";
+                }
                 window.plugins.flashlight.toggle(onSuccess, onError);
             }
             else {
@@ -44,5 +59,31 @@ function onError() {
     
 function showMessage(text) {
     var statusBox = document.getElementById('result');
-    statusBox.textContent = text;
+   statusBox.textContent = text;
+}
+
+function changeImage() {
+    var image = document.getElementById('myImage');
+    alert(image);
+    if (image.src.match("on130")) {
+        image.src = "styles/img/off130.png";
+    } else {
+        image.src = "styles/img/on130.png";
+    }
+}
+
+function changeImage1() {
+    var e = document.getElementById('buttonToggleFL');
+    var cs = document.defaultView.getComputedStyle(e, null);
+    var bg = cs.getPropertyValue('background-image');
+    alert(bg);
+    if (bg.match("on130")) {
+        alert("=");
+        e.style.background = "center url('styles/img/off130.png') no-repeat";
+        //cs.PropertyValue('background-image') = "styles/img/off130.png";
+    } else {
+        alert("aaa");
+        e.style.background = "center url('styles/img/on130.png') no-repeat";
+        //cs.PropertyValue('background-image') = "styles/img/on130.png";
+    }
 }
