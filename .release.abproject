@@ -1,0 +1,7 @@
+{
+  "CorePlugins": [
+    "cordova-plugin-device",
+    "cordova-plugin-splashscreen",
+    "cordova-plugin-whitelist"
+  ]
+}

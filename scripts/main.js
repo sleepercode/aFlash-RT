@@ -3,6 +3,16 @@ var msg;
 
 document.addEventListener("deviceready", onDeviceReady, false);
 
+/*On exit close app*/
+document.addEventListener("backbutton", function () {
+    // pass exitApp as callbacks to the switchOff method
+    window.plugins.flashlight.switchOff(exitApp, exitApp);
+}, false);
+
+function exitApp() {
+    navigator.app.exitApp();
+}
+
 function onDeviceReady() {
     navigator.splashscreen.hide();
     toggleFLButton = document.getElementById("buttonToggleFL");
@@ -14,14 +24,16 @@ function toggleFlashLight() {
         //alert("Not Supported in Simulator.");
         var cs = document.defaultView.getComputedStyle(toggleFLButton, null);
         var bg = cs.getPropertyValue('background-image');
-
-        if (bg.match("on130")) {
+        //alert(bg);
+        toggleFLButton.style.background = "center url('styles/img/on130.png') #242424 no-repeat";
+        if (bg.match ("on130")) {
             toggleFLButton.style.background = "center url('styles/img/off130.png') #242424 no-repeat";
         }
         else {
             toggleFLButton.style.background = "center url('styles/img/on130.png') #242424 no-repeat";
         }
         window.plugins.flashlight.toggle(onSuccess, onError);
+        window.plugins.flashlight.isSwitchedOn(onTrue, onFalse);
     }
     else {
         window.plugins.flashlight.available(function(isAvailable) {
@@ -34,9 +46,11 @@ function toggleFlashLight() {
                 //    toggleFLButton.textContent = "ON";
                 //} 
                 //window.plugins.flashlight.toggle(onSuccess, onError);
-                var cs = document.defaultView.getComputedStyle(toggleFLButton, null);
-                var bg = cs.getPropertyValue('background-image');
 
+             var cs = document.defaultView.getComputedStyle(toggleFLButton, null);
+             var bg = cs.getPropertyValue('background-image');
+             //alert(bg);
+             toggleFLButton.style.background = "center url('styles/img/on130.png') #242424 no-repeat";
                 if (bg.match("on130")) {
                     toggleFLButton.style.background = "center url('styles/img/off130.png') #242424 no-repeat";
                 }
@@ -44,7 +58,9 @@ function toggleFlashLight() {
                     toggleFLButton.style.background = "center url('styles/img/on130.png') #242424 no-repeat";
                 }
                 window.plugins.flashlight.toggle(onSuccess, onError);
+
             }
+
             else {
                 alert("aFlash not available on this device");
             }
@@ -66,26 +82,3 @@ function showMessage(text) {
     var statusBox = document.getElementById('result');
    statusBox.textContent = text;
 }
-
-function changeImage() {
-    var image = document.getElementById('myImage');
-    if (image.src.match("on130")) {
-        image.src = "styles/img/off130.png";
-    } else {
-        image.src = "styles/img/on130.png";
-    }
-}
-/*
-function changeImage1() {
-    var e = document.getElementById('buttonToggleFL');
-    var cs = document.defaultView.getComputedStyle(e, null);
-    var bg = cs.getPropertyValue('background-image');
-    if (bg.match("on130")) {
-        e.style.background = "center url('styles/img/off130.png') #242424 no-repeat";
-        //cs.PropertyValue('background-image') = "styles/img/off130.png";
-    } else {
-        e.style.background = "center url('styles/img/on130.png') #242424 no-repeat";
-        //cs.PropertyValue('background-image') = "styles/img/on130.png";
-    }
-}
-*/
